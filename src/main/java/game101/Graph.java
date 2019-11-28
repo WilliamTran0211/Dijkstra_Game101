@@ -58,7 +58,8 @@ public class Graph {
         List<Connection> result = new ArrayList<Connection>();
         Connection newConnection;
         for(int i=0; i< this.adjacencyMatrix[fromNode].length; i++){
-            if(this.adjacencyMatrix[fromNode][i] != Double.MAX_VALUE || this.adjacencyMatrix[fromNode][i] != 0 ){
+//            if(this.adjacencyMatrix[fromNode][i] != Double.MAX_VALUE || this.adjacencyMatrix[fromNode][i] != 0.0 ){
+            if(this.adjacencyMatrix[fromNode][i] != 0.0 ){
                 newConnection = new Connection();
                 newConnection.setCost(this.adjacencyMatrix[fromNode][i]);
                 newConnection.setFromNode(fromNode);
@@ -66,6 +67,7 @@ public class Graph {
                 result.add(newConnection);
             }
         }
+        System.out.println(result);
         return result;
     }
 }

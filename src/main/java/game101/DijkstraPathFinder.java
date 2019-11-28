@@ -24,7 +24,7 @@ public class DijkstraPathFinder {
 
        NodeRecord startNodeRecord = new NodeRecord();
        NodeRecord currentNodeRecord = new NodeRecord();
-       NodeRecord endNodeRecord = new NodeRecord();
+       NodeRecord endNodeRecord;
 
        int endNode;
        double endNodeCost;
@@ -39,6 +39,7 @@ public class DijkstraPathFinder {
            currentNodeRecord = smallestElement(open);
 
            if(currentNodeRecord.getNode() == end){
+               close.add(currentNodeRecord);
                break;
            }
 
@@ -48,9 +49,9 @@ public class DijkstraPathFinder {
 
            for(int i=0; i< connections.size(); i++){
 
+               System.out.println("loop i="+i);
                endNode = connections.get(i).getToNode();
                endNodeCost = connections.get(i).getCost() + currentNodeRecord.getCostSoFar();
-
 
                if(contains(close, endNode)){
                    continue;
@@ -81,7 +82,6 @@ public class DijkstraPathFinder {
 
 
        if(currentNodeRecord == null || currentNodeRecord.getNode() != end){
-           System.out.println("null chỗ này");
            return null;
        }
        else{

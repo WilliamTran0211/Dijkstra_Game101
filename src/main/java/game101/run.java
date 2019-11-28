@@ -1,5 +1,6 @@
 package game101;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ public class run {
 
     public static void main(String[] args) {
 
-        Graph newMatrix = new Graph("C:\\Users\\Admin\\Desktop\\Game101\\Game101_Dijkstra\\src\\main\\java\\game101\\matrix.txt");
+        Graph newMatrix = new Graph("C:\\Users\\Admin\\Desktop\\Game101\\Dijkstra_Game101\\src\\main\\resources\\matrix_data.txt");
 
         List<Connection> res = new ArrayList<Connection>();
 

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Game101_Dijkstra" />
+        <module name="Dijkstra_Game101" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />
